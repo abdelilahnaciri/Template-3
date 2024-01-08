@@ -1,8 +1,85 @@
 /* Start Variables */
-
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787e0;
+}
 /* End Variables */
 /* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
 body {
     font-family: 'Cairo', sans-serif;
 }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px)
+{
+    .container {
+        width: 750px;
+    }
+}
+/* Meduim */
+@media (min-width: 992px)
+{
+    .container {
+        width: 970px
+    }
+}
+/* Large */
+@media (min-width: 1200px)
+{
+    .container {
+        width: 1170px;
+    }
+}
 /* End Global Rules */
+/* Start Header */
+header {
+    box-shadow: -1px 10px 10px -5px #555;
+    min-width: 70px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo {
+    color: var(--main-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+header .container a {
+    color: #fff;
+}
+header .container ul {
+    display: flex;
+    
+}
+header .container ul li {
+    padding: 20px;
+    font-size: 20px;
+}
+/* End Header */
