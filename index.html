@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Three</title>
-    <!-- Render All Elements Normally-->
-    <link rel="stylsheet" href="css/all.min.css">
     <!-- Font Awesome Library -->
+    <link rel="stylsheet" href="css/all.min.css">
+    <!-- Render All Elements Normally-->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Main Template CSS File -->
     <link rel="stylesheet" href="css/main.css">
@@ -17,21 +17,34 @@
 </head>
 <body>
     <!-- Start Header-->
-    <header>
+    <div class="header">
         <div class="container">
             <a href="#" class="logo">Abdel</a>
-            <nav>
-                <div class="links">
-                    <ul>
-                        <li><a href="Articles">Articles</a></li>
-                        <li><a href="Gallery">Gallery</a></li>
-                        <li><a href="Features">Features</a></li>
-                        <li><a href="Others-Links">Other Links</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <ul class="main-nav">
+                <li><a href="articles">Articles</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="features">Features</a></li>
+                <li><a href="others-links">Other Links</a></li>
+            </ul>
         </div>
-    </header>
+    </div>
     <!-- End Header-->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="container">
+            <div class="text">
+                <h1>Welcome, To Abdel World</h1>
+                <p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events</p>
+            </div>
+            <div class="image">
+                <img src="imgs/landing-image.png" alt="">
+            </div>
+        </div>
+        <a href="#articles" class="go-down">
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </a>
+    </div>
+    <!-- End Landing -->
+    <script src="https://kit.fontawesome.com/f373cd81dd.js" crossorigin="anonymous"></script>
 </body>
-</html>
+</html>  
