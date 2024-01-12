@@ -82,11 +82,16 @@ ul {
     right: -35px;
 }
 .main-title:hover::before{
-    animation: left-move var(--main-transition) linear forwards;
+    animation: left-move 0.5s linear forwards;
 }
 .main-title:hover::after {
-    animation: right-move var(--main-transition) linear forwards;
-} 
+    animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+    color: #fff;
+    border-color: #fff;
+    transition-delay: 0.5s;
+}
 /* End Global Rules */
 /* Start Header */
 .header {
