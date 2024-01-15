@@ -3,6 +3,8 @@
     --main-color: #2196F3;
     --main-color-alt: #1787e0;
     --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -55,13 +57,16 @@ ul {
     }
 }
 .main-title {
-    margin: 100px auto;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 auto 80px;
     display: block;
     border: 2px solid #000;
     padding: 10px 20px;
     width: fit-content;
     position: relative;
     transition: var(--main-transition);
+    z-index: 999;
 }
 .main-title::before,
 .main-title::after {
@@ -70,7 +75,6 @@ ul {
     width: 12px;
     height: 12px;
     background-color: var(--main-color);
-    z-index: -1;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
@@ -323,6 +327,57 @@ ul {
     color: var(--main-color-alt);
 }
 /* End Landing */
+/* Start Articles */
+.articles {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.articles .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+.articles .box {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    -webkit-box-shadow:0 0 10px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    overflow: hidden;
+    transition:  transform var(--main-transition), box-shadow var(--main-transition);
+}
+.articles .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.articles .box img {
+    width: 100%;
+    max-width: 100%;
+}
+.articles .box .content {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.articles .box .content p {
+    margin-top: 10px;
+    color: #888;
+    line-height: 1.6;
+}
+.articles .box .info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);
+    
+}
+.articles .box .info a {
+    font-weight: bold;
+    display: block;
+    color: inherit;
+}
+/* End Articles */
 /* Start Animation */
 @keyframes up-and-down {
     0%,
@@ -360,6 +415,7 @@ ul {
         border-radius: 0;
         width: 100%;
         height: 100%;
+        z-index: -1;
 
     }
 }
@@ -375,7 +431,7 @@ ul {
         border-radius: 0;
         width: 100%;
         height: 100%;
-
+        z-index: -1;
     }
 }
 /* End Main-Title Animation */
