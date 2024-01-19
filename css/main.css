@@ -450,13 +450,13 @@ ul {
     height: 100%;
 }
 .features .container > div:nth-child(1) .img-holder::before {
-    background-color: rgb(244 63 54 / 50%);
+    background-color: rgb(244 63 54 / 60%);
 }
 .features .container > div:nth-child(2) .img-holder::before {
-    background-color: rgb(0 150 135 / 50%);
+    background-color: rgb(0 150 135 / 60%);
 }
 .features .container > div:nth-child(3) .img-holder::before {
-    background-color: rgb(3 168 244 / 50%);
+    background-color: rgb(3 168 244 / 60%);
 }
 .features .container > div .img-holder::after {
     content: "";
@@ -465,7 +465,7 @@ ul {
     height: 100%;
     background-color: #ffff;
     left: 0;
-    top: 80%;
+    top: 75%;
     z-index: 1;
     transform: skewY(-20deg);
     transition: var(--main-transition);
@@ -558,7 +558,14 @@ ul {
     width: 100%;
 }
 /* End Features */
+/* Start Testimonials */
+/* End Testimonials */
+.testimenials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
 /* Start Animation */
+/* Start Landing Animation */
 @keyframes up-and-down {
     0%,
     100% {
@@ -582,6 +589,7 @@ ul {
       transform: translateY(-15px);
     }
 }
+/* End Landing Animation */
 /* Start Main-Title Animation */
 @keyframes left-move {
     50% {
