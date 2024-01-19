@@ -247,7 +247,6 @@ ul {
 .header .mega-menu .links li a i {
     margin-right: 10px;
 } 
-
 /* End Header */
 /* Start Landing */
 .landing {
@@ -429,7 +428,134 @@ ul {
 /* Start Features */
 .features {
     padding-top: var(--main-padding-top);
-    padding-top: var(--main-padding-bottom);
+    padding-bottom: var(--main-padding-bottom);
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.features .container > div {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.features .container > div .img-holder{
+    position: relative;
+    overflow: hidden;
+}
+.features .container > div .img-holder::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.features .container > div:nth-child(1) .img-holder::before {
+    background-color: rgb(244 63 54 / 50%);
+}
+.features .container > div:nth-child(2) .img-holder::before {
+    background-color: rgb(0 150 135 / 50%);
+}
+.features .container > div:nth-child(3) .img-holder::before {
+    background-color: rgb(3 168 244 / 50%);
+}
+.features .container > div .img-holder::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+    left: 0;
+    top: 80%;
+    z-index: 1;
+    transform: skewY(-20deg);
+    transition: var(--main-transition);
+}
+.features .container > div:hover .img-holder::after {
+    transform: skewY(20deg);
+}
+.features .container .img-holder img {
+    width: 100%;
+    max-width: 100%;
+}
+.features .container > div h2 {
+    font-size: 40px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.features .container > div h2::before {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 5px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .container > div:nth-child(1) h2::before {
+    background-color: #f44036;
+}
+.features .container > div:nth-child(2) h2::before {
+    background-color: #009688;
+}
+.features .container > div:nth-child(3) h2::before {
+    background-color: #03a9f4;
+}
+.features .container > div p {
+    margin: 35px 0;
+    padding: 25px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #888;
+}
+.features .container > div a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 35px;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    z-index: 999;
+}
+.features .container > div a::before {
+    position: absolute;
+    content: "";
+    background-color: inherit;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -999;
+    transition: var(--main-transition);
+}
+.features .container > div:nth-child(1) a {
+    border: 4px solid #f44036;
+    color: #f44036;
+}
+.features .container > div:nth-child(1) a::before {
+    background-color: #f44036;
+}
+.features .container > div:nth-child(2) a {
+    border: 4px solid #009688;
+    color: #009688;
+}
+.features .container > div:nth-child(2) a::before {
+    background-color: #009688;
+}
+.features .container > div:nth-child(3) a {
+    border: 4px solid #03a9f4;
+    color: #03a9f4;
+}
+.features .container > div:nth-child(3) a::before {
+    background-color: #03a9f4;
+}
+.features .container > div:hover a {
+    color: #fff;
+}
+.features .container > div:hover a::before{
+    width: 100%;
 }
 /* End Features */
 /* Start Animation */
