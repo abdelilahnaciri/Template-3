@@ -5,6 +5,7 @@
     --main-transition: 0.3s;
     --main-padding-top: 100px;
     --main-padding-bottom: 100px;
+    --section-background: #ECECEC;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -259,7 +260,7 @@ ul {
     height: 100%;
     left: 0;
     top: -100px;
-    background-color: #eee;
+    background-color: var(--section-background);
     z-index: -999;
     transform: skewY(-6deg);
     transform-origin: top left;
@@ -378,6 +379,59 @@ ul {
     color: inherit;
 }
 /* End Articles */
+/* Start Gallery */
+.gallery {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    
+}
+.gallery .box {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 12%),
+    0 2px 4px 0 rgb(0 0 0 / 12%);
+    
+}
+.gallery .box .image {
+    position: relative;
+    overflow: hidden;
+}
+.gallery .box .image::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255 255 255 / 20%);
+    opacity: 0;
+    z-index: 1;
+}
+.gallery .box .image:hover::before {
+    animation: flashing 0.7s;
+}
+.gallery .box .image img {
+    width: 100%;
+    max-width: 100%;
+    transition: var(--main-transition);
+}
+.gallery .box .image:hover img {
+    transform: scale(1.1) rotate(-5deg);
+}
+/* End Gallery */
+/* Start Features */
+.features {
+    padding-top: var(--main-padding-top);
+    padding-top: var(--main-padding-bottom);
+}
+/* End Features */
 /* Start Animation */
 @keyframes up-and-down {
     0%,
@@ -435,4 +489,16 @@ ul {
     }
 }
 /* End Main-Title Animation */
+/* Start Flashing Gallery Animation */
+@keyframes flashing {
+    0%, 40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
+/* End Flashing Gallery Animation */
 /* End Animation */
