@@ -633,7 +633,8 @@ ul {
     background-color: #dfdfdf;
     width: 0;
 }
-.team .box:hover .data img {
+.team .box:hover .data img,
+.team .box:hover .info {
     filter: grayscale(100%);
 }
 .team .box:hover::after {
