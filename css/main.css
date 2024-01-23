@@ -67,6 +67,7 @@ ul {
     width: fit-content;
     position: relative;
     transition: var(--main-transition);
+    background-color: #fff;
     z-index: 999;
 }
 .main-title::before,
@@ -900,6 +901,24 @@ ul {
 .events {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    overflow: hidden;
+}
+.events .dots {
+    width: 250px;
+    height: 150px;
+    background-image: radial-gradient(var(--main-color) 3px, transparent 3px);
+    background-size: 25px 25px;
+    position: absolute;
+    z-index: -1;
+}
+.events .dots-up {
+    top: 10%;
+    left: -12px;
+}
+.events .dots-down {
+    bottom: 2%;
+    right: -12px;
 }
 .events .container {
     display: flex;
@@ -966,7 +985,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     max-width: 100%;
 }
 .events .subscribe form input {
