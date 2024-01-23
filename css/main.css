@@ -67,7 +67,7 @@ ul {
     width: fit-content;
     position: relative;
     transition: var(--main-transition);
-    background-color: #fff;
+    background-color: inherit;
     z-index: 999;
 }
 .main-title::before,
@@ -901,6 +901,7 @@ ul {
 .events {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
+    background-color: #fff;
     position: relative;
     overflow: hidden;
 }
@@ -910,7 +911,6 @@ ul {
     background-image: radial-gradient(var(--main-color) 3px, transparent 3px);
     background-size: 25px 25px;
     position: absolute;
-    z-index: -1;
 }
 .events .dots-up {
     top: 10%;
