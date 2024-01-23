@@ -975,6 +975,7 @@ ul {
 .events .subscribe {
     width: 100%;
     margin-top: 5%;
+    z-index: 1;
 }
 .events .subscribe form {
     width: 600px;
