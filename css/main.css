@@ -1281,6 +1281,7 @@ ul {
     min-height: 100vh;
     display: flex;
     text-align: center;
+    padding-bottom: 50px;
     background-color: #fff;
 }
 @media(max-width:991px) {
